@@ -46,15 +46,12 @@ export class MapComponent implements AfterViewInit {
     console.log("map:", map);
     console.log("markers:", this.Markers)
 
-    
-    
-
-    this.Markers.forEach(marker => {
+    this.Markers.forEach((marker, index) => {
 
       var newMarker = new Overlay({
         position: fromLonLat([marker.lng, marker.lat]),
         positioning: 'center-center',
-        element: document.getElementById('marker'),
+        element: document.getElementById('marker_' + index),
         stopEvent: false
       });
       map.addOverlay(newMarker);

@@ -13,7 +13,8 @@ export class FirstPageComponent implements OnInit {
 
   ngOnInit() {
     this.markers=[
-      {lat: 29.4241, lng: -98.4936}
+      {lat: 29.4241, lng: -98.4936},
+      {lat: 29.4241, lng: -97.4836}
     ]
   }
 
